@@ -12,7 +12,7 @@
     "changeLogUpdateCommitMessage": "Applying package updates. [skip-ci]"
   },
   "repository": {
-    "url": "https://github.com/Azure/communication-ui-sdk",
+    "url": "https://github.com/Azure/communication-ui-sdk.git",
     "defaultBranch": "main"
   },
   "telemetryEnabled": false,
@@ -20,27 +20,32 @@
     {
       "packageName": "@azure/communication-ui",
       "projectFolder": "packages/communication-ui",
-      "reviewCategory": "production"
+      "reviewCategory": "production",
+      "shouldPublish": true
     },
     {
       "packageName": "acs-calling-sample",
       "projectFolder": "samples/Calling",
-      "reviewCategory": "prototypes"
+      "reviewCategory": "prototypes",
+      "versionPolicyName": "samples"
     },
     {
       "packageName": "acs-chat-sample",
       "projectFolder": "samples/Chat",
-      "reviewCategory": "prototypes"
+      "reviewCategory": "prototypes",
+      "versionPolicyName": "samples"
     },
     {
       "packageName": "acs-one-to-one-call-sample",
       "projectFolder": "samples/OneToOneCall",
-      "reviewCategory": "prototypes"
+      "reviewCategory": "prototypes",
+      "versionPolicyName": "samples"
     },
     {
       "packageName": "acs-server-sample",
       "projectFolder": "samples/Server",
-      "reviewCategory": "prototypes"
+      "reviewCategory": "prototypes",
+      "versionPolicyName": "samples"
     }
   ]
 }
