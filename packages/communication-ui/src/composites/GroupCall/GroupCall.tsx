@@ -16,7 +16,7 @@ import { Stack } from '@fluentui/react';
 import { CommunicationUiErrorInfo } from '../../types';
 
 export type GroupCallCompositeProps = {
-  /** Display name in the group call */
+  /** Display name in the group call  - wow new comment*/
   displayName: string;
   /** User Id */
   userId: string;
