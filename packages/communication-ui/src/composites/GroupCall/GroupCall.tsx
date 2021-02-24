@@ -18,7 +18,7 @@ import { CommunicationUiErrorInfo } from '../../types';
 export type GroupCallCompositeProps = {
   /** Display name in the group call  - wow new comment*/
   displayName: string;
-  /** User Id */
+  /** User Id  - wow and another*/
   userId: string;
   /** Group Id */
   groupId: string;
