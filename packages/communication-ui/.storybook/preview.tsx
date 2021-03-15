@@ -5,6 +5,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { FluentThemeProvider } from '../src/providers/FluentThemeProvider';
 import { darkTheme, lightTheme } from './themes';
 import { initializeIcons, loadTheme } from '@fluentui/react';
+import { ThemeProvider } from '@fluentui/react-theme-provider';
 
 // Removing `loadTheme({})` causes storybook declaration exception.
 loadTheme({});
@@ -23,10 +24,17 @@ export const parameters = {
 
 const withThemeProvider = (Story: any, context: any) => {
   const theme = context.globals.theme === 'light' ? lightTheme : darkTheme;
+  const bgTheme = context.globals.theme === 'light' ? {} : {
+    palette: {
+      white: '#070707'
+    }
+  };
   return (
-    <FluentThemeProvider theme={theme}>
-      <Story {...context} />
-    </FluentThemeProvider>
+    <ThemeProvider applyTo="body" theme={bgTheme}>
+      <FluentThemeProvider theme={theme}>
+        <Story {...context} />
+      </FluentThemeProvider>
+    </ThemeProvider>
   );
 };
 
