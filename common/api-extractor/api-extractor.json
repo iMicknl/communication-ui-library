@@ -5,18 +5,15 @@
     "enabled": true,
     "reportFolder": "<projectFolder>/review/"
   },
-  "docModel": {
+  "dtsRollup": {
     "enabled": true
   },
-  "dtsRollup": {
+  "docModel": {
     "enabled": true
   },
   "messages": {
     "extractorMessageReporting": {
       "ae-missing-release-tag": {
-        "logLevel": "none"
-      },
-      "ae-unresolved-link": {
         "logLevel": "none"
       },
       "ae-forgotten-export": {
