@@ -8,12 +8,13 @@ import {
   IconButton,
   OverflowSet,
   Stack,
-  PersonaPresence
+  PersonaPresence,
+  mergeStyles
 } from '@fluentui/react';
 import { connectFuncsToContext, ListParticipant, ParticipantItem } from '@azure/communication-ui';
-import { MicOffIcon, CallControlPresentNewIcon } from '@fluentui/react-northstar';
 import { participantStackStyle, overFlowButtonStyles, overflowSetStyle } from './styles/ParticipantStack.styles';
 import { MapToParticipantListProps } from './consumers/MapToParticipantListProps';
+import { MicOff20Filled, ShareScreenStart20Filled } from '@fluentui/react-icons';
 
 export type ParticipantStackProps = {
   /** User ID of user */
@@ -59,8 +60,8 @@ const defaultRenderer = (item: IOverflowSetItemProps): JSX.Element => {
       presence={presence}
       onRenderIcon={() => (
         <Stack horizontal={true} tokens={{ childrenGap: '0.5rem' }}>
-          {item.isScreenSharing && <CallControlPresentNewIcon size="small" />}
-          {item.isMuted && <MicOffIcon size="small" />}
+          {item.isScreenSharing && <ShareScreenStart20Filled className={mergeStyles({ height: '0.875rem' })} />}
+          {item.isMuted && <MicOff20Filled className={mergeStyles({ height: '0.875rem' })} />}
         </Stack>
       )}
     />

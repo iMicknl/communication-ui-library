@@ -2,14 +2,14 @@
 
 import React, { useCallback } from 'react';
 import {
-  CallControlCloseTrayIcon,
-  CallControlPresentNewIcon,
-  CallEndIcon,
-  CallVideoIcon,
-  CallVideoOffIcon,
-  MicIcon,
-  MicOffIcon
-} from '@fluentui/react-icons-northstar';
+  CallEnd20Filled,
+  MicOn20Filled,
+  MicOff20Filled,
+  ShareScreenStart20Filled,
+  ShareScreenStop20Filled,
+  Video20Filled,
+  VideoOff20Filled
+} from '@fluentui/react-icons';
 import { CommandButton, Stack } from '@fluentui/react';
 import {
   controlButtonDisabledStyle,
@@ -80,7 +80,7 @@ const MediaControlsComponentBase = (props: MediaControlsProps & ErrorHandlingPro
         className={localVideoBusy || cameraDisabled ? controlButtonDisabledStyle : controlButtonStyle}
       >
         <div className={fullWidth}>
-          {localVideoEnabled ? <CallVideoIcon size="medium" /> : <CallVideoOffIcon size="medium" />}
+          {localVideoEnabled ? <Video20Filled size="medium" /> : <VideoOff20Filled size="medium" />}
         </div>
       </CommandButton>
       <CommandButton
@@ -92,7 +92,7 @@ const MediaControlsComponentBase = (props: MediaControlsProps & ErrorHandlingPro
         disabled={micDisabled}
         className={micDisabled ? controlButtonDisabledStyle : controlButtonStyle}
       >
-        <div className={fullWidth}>{isMicrophoneActive ? <MicIcon size="medium" /> : <MicOffIcon size="medium" />}</div>
+        <div className={fullWidth}>{isMicrophoneActive ? <MicOn20Filled /> : <MicOff20Filled />}</div>
       </CommandButton>
       {isLocalScreenShareSupportedInBrowser() && (
         <CommandButton
@@ -105,11 +105,7 @@ const MediaControlsComponentBase = (props: MediaControlsProps & ErrorHandlingPro
           className={screenShareDisabled ? controlButtonDisabledStyle : controlButtonStyle}
         >
           <div className={fullWidth}>
-            {isLocalScreenShareActive ? (
-              <CallControlCloseTrayIcon size="medium" />
-            ) : (
-              <CallControlPresentNewIcon size="medium" />
-            )}
+            {isLocalScreenShareActive ? <ShareScreenStart20Filled /> : <ShareScreenStop20Filled />}
           </div>
         </CommandButton>
       )}
@@ -123,7 +119,7 @@ const MediaControlsComponentBase = (props: MediaControlsProps & ErrorHandlingPro
         styles={leaveButtonStyle}
       >
         <div className={fullWidth}>
-          <CallEndIcon size="medium" />
+          <CallEnd20Filled size="medium" />
           {!compressedMode && <span className={endCallButtonTextStyle}>Leave</span>}
         </div>
       </CommandButton>
