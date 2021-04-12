@@ -50,25 +50,25 @@ export const ReadReceipt = (props: ReadReceiptProps): JSX.Element => {
   } = props;
 
   switch (messageStatus) {
-    case MessageStatus.FAILED:
+    case 'failed':
       return (
         <TooltipHost content={failedToSendTooltipText}>
           <ErrorCircle20Regular className={mergeStyles(readReceiptIconErrorStyle, styles?.root)} />
         </TooltipHost>
       );
-    case MessageStatus.SENDING:
+    case 'sending':
       return (
         <TooltipHost content={sendingTooltipText}>
           <Circle20Regular className={mergeStyles(readReceiptIconMessageStyle, styles?.root)} />
         </TooltipHost>
       );
-    case MessageStatus.SEEN:
+    case 'seen':
       return (
         <TooltipHost content={seenTooltipText}>
           <EyeShow20Filled className={mergeStyles(styles?.root)} />
         </TooltipHost>
       );
-    case MessageStatus.DELIVERED:
+    case 'delivered':
       return (
         <TooltipHost content={deliveredTooltipText}>
           <CheckmarkCircle20Regular className={mergeStyles(readReceiptIconMessageStyle, styles?.root)} />
