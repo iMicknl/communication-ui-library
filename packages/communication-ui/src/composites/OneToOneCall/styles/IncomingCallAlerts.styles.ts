@@ -20,27 +20,29 @@ export const incomingCallToastAvatarContainerStyle = mergeStyles({
 
 export const incomingCallAcceptButtonStyle = mergeStyles({
   backgroundColor: palette.greenDark,
-  color: palette.white,
+  fill: palette.white,
   borderRadius: '2rem',
   minWidth: '2rem',
   width: '2rem',
   border: 'none',
+  padding: 'none',
   ':hover, :active': {
     backgroundColor: palette.green,
-    color: palette.white
+    fill: palette.white
   }
 });
 
 export const incomingCallRejectButtonStyle = mergeStyles({
   backgroundColor: palette.redDark,
-  color: palette.white,
+  fill: palette.white,
   borderRadius: '2rem',
   minWidth: '2rem',
   width: '2rem',
   border: 'none',
+  padding: 'none',
   ':hover, :active': {
     backgroundColor: palette.red,
-    color: palette.white
+    fill: palette.white
   }
 });
 
@@ -56,4 +58,8 @@ export const incomingCallModalLocalPreviewStyle = mergeStyles({
   '& video': {
     borderRadius: '0.25rem'
   }
+});
+
+export const incomingCallModalVideoIconStyle = mergeStyles({
+  height: '0.9rem'
 });

@@ -1,17 +1,17 @@
 // © Microsoft Corporation. All rights reserved.
 import { mergeStyles, Stack, IButtonProps } from '@fluentui/react';
 import {
-  CallControlCloseTrayIcon,
-  CallControlPresentNewIcon,
-  CallEndIcon,
-  CallIcon,
-  CallRecordingIcon,
-  CallVideoIcon,
-  CallVideoOffIcon,
-  MicIcon,
-  MicOffIcon,
-  MoreIcon
-} from '@fluentui/react-northstar';
+  Call20Filled,
+  CallEnd20Filled,
+  Record20Filled,
+  MicOn20Filled,
+  MicOff20Filled,
+  MoreHorizontal20Filled,
+  ShareScreenStart20Filled,
+  ShareScreenStop20Filled,
+  Video20Filled,
+  VideoOff20Filled
+} from '@fluentui/react-icons';
 import React from 'react';
 import { BaseCustomStylesProps } from '../types';
 import {
@@ -25,9 +25,9 @@ import {
 export const videoButtonProps: IButtonProps = {
   onRenderIcon: (props?: IButtonProps): JSX.Element => {
     if (props?.checked) {
-      return <CallVideoIcon />;
+      return <Video20Filled />;
     } else {
-      return <CallVideoOffIcon />;
+      return <VideoOff20Filled />;
     }
   },
   styles: controlButtonStyles
@@ -49,9 +49,9 @@ export const labeledVideoButtonProps: IButtonProps = {
 export const audioButtonProps: IButtonProps = {
   onRenderIcon: (props?: IButtonProps): JSX.Element => {
     if (props?.checked) {
-      return <MicIcon />;
+      return <MicOn20Filled />;
     } else {
-      return <MicOffIcon />;
+      return <MicOff20Filled />;
     }
   },
   styles: controlButtonStyles
@@ -73,9 +73,9 @@ export const labeledAudioButtonProps: IButtonProps = {
 export const screenShareButtonProps: IButtonProps = {
   onRenderIcon: (props?: IButtonProps): JSX.Element => {
     if (props?.checked) {
-      return <CallControlCloseTrayIcon />;
+      return <ShareScreenStart20Filled />;
     } else {
-      return <CallControlPresentNewIcon bordered={false} />;
+      return <ShareScreenStop20Filled />;
     }
   },
   styles: controlButtonStyles
@@ -95,7 +95,7 @@ export const labeledScreenShareButtonProps: IButtonProps = {
 
 /** Fluent UI Button props for options control */
 export const optionsButtonProps: IButtonProps = {
-  onRenderIcon: (): JSX.Element => <MoreIcon />,
+  onRenderIcon: (): JSX.Element => <MoreHorizontal20Filled />,
   menuIconProps: {
     hidden: true
   },
@@ -116,7 +116,7 @@ export const labeledOptionsButtonProps: IButtonProps = {
 
 /** Fluent UI Button props for recording control */
 export const recordButtonProps: IButtonProps = {
-  onRenderIcon: (): JSX.Element => <CallRecordingIcon />,
+  onRenderIcon: (): JSX.Element => <Record20Filled />,
   styles: controlButtonStyles
 };
 
@@ -134,7 +134,7 @@ export const labeledRecordButtonProps: IButtonProps = {
 
 /** Fluent UI Button props for call answering control */
 export const answerButtonProps: IButtonProps = {
-  onRenderIcon: (): JSX.Element => <CallIcon />,
+  onRenderIcon: (): JSX.Element => <Call20Filled />,
   styles: controlButtonStyles
 };
 
@@ -148,7 +148,7 @@ export const labeledAnswerButtonProps: IButtonProps = {
 
 /** Fluent UI Button props for end call control */
 export const hangupButtonProps: IButtonProps = {
-  onRenderIcon: (): JSX.Element => <CallEndIcon />,
+  onRenderIcon: (): JSX.Element => <CallEnd20Filled />,
   styles: hangUpControlButtonStyles
 };
 

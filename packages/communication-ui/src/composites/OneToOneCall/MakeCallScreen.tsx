@@ -1,7 +1,7 @@
 // © Microsoft Corporation. All rights reserved.
 
 import { DefaultButton, IconButton, Stack, TextField } from '@fluentui/react';
-import { CallIcon, VideoCameraEmphasisIcon } from '@fluentui/react-icons-northstar';
+import { Call20Filled, Video20Filled } from '@fluentui/react-icons';
 import copy from 'copy-to-clipboard';
 import React, { useState } from 'react';
 import { useCallContext } from '../../providers';
@@ -70,7 +70,7 @@ export const MakeCallScreen = (props: MakeCallScreenProps): JSX.Element => {
             startCall(calleeId, false);
           }}
         >
-          <CallIcon className={buttonIconStyle} size="medium" />
+          <Call20Filled className={buttonIconStyle} />
           Audio Call
         </DefaultButton>
         <DefaultButton
@@ -81,7 +81,7 @@ export const MakeCallScreen = (props: MakeCallScreenProps): JSX.Element => {
             startCall(calleeId, true);
           }}
         >
-          <VideoCameraEmphasisIcon className={buttonIconStyle} size="medium" />
+          <Video20Filled className={buttonIconStyle} />
           Video Call
         </DefaultButton>
       </Stack>

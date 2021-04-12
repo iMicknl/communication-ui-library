@@ -7,7 +7,7 @@ dependencies:
   '@babel/preset-env': 7.13.10_@babel+core@7.13.10
   '@babel/preset-react': 7.12.13_@babel+core@7.13.10
   '@fluentui/react': 7.164.1_b0d7ca8a0459a1df1ff516252688d92a
-  '@fluentui/react-icons': 0.3.10_b0d7ca8a0459a1df1ff516252688d92a
+  '@fluentui/react-icons': 1.1.117
   '@fluentui/react-icons-northstar': 0.51.7_b0d7ca8a0459a1df1ff516252688d92a
   '@fluentui/react-northstar': 0.51.7_b0d7ca8a0459a1df1ff516252688d92a
   '@fluentui/react-theme-provider': 0.18.5_b0d7ca8a0459a1df1ff516252688d92a
@@ -2810,23 +2810,10 @@ packages:
       react-dom: ^16.8.0
     resolution:
       integrity: sha512-9p0DQcGng+CA/sTnjxxaGWC8CH/OhwZCIEwp3srMeIkPaeWG7jKIOCTjRh87l5XhaeaYds6b88zET7axAHoXvw==
-  /@fluentui/react-icons/0.3.10_b0d7ca8a0459a1df1ff516252688d92a:
-    dependencies:
-      '@microsoft/load-themed-styles': 1.10.151
-      '@types/react-dom': 16.9.11
-      '@uifabric/set-version': 7.0.24
-      '@uifabric/utilities': 7.33.5_b0d7ca8a0459a1df1ff516252688d92a
-      react: 16.14.0
-      react-dom: 16.14.0_react@16.14.0
-      tslib: 1.14.1
+  /@fluentui/react-icons/1.1.117:
     dev: false
-    peerDependencies:
-      '@types/react': '*'
-      '@types/react-dom': '>=16.8.0 <17.0.0'
-      react: '>=16.8.0 <17.0.0'
-      react-dom: '>=16.8.0 <17.0.0'
     resolution:
-      integrity: sha512-b2Y5ZcvY+/3xAg7pDcHAgLXIp8BbCfKM47Yh+uQAAH1S4THAetKpmFUOugJRHye3sr4ZDBk2QdSjUt4MXrDTsQ==
+      integrity: sha512-I0ShA95KwCEhvdwuYhjbWsknSRGEjwIuUDblTnGsc4rHgPdtSW1isIbpHDhUSJe6C24ky2ZXI3aGDIgqlTx+eA==
   /@fluentui/react-northstar-fela-renderer/0.51.7_react-dom@16.14.0+react@16.14.0:
     dependencies:
       '@babel/runtime': 7.13.10
@@ -20170,13 +20157,16 @@ packages:
       '@types/jest': 26.0.20
       '@typescript-eslint/eslint-plugin': 4.18.0_e9e1aa536ec0b34179456e3b69e4968e
       '@typescript-eslint/parser': 4.18.0_eslint@7.22.0+typescript@4.1.5
+      copyfiles: 2.4.1
       eslint: 7.22.0
       eslint-config-prettier: 6.15.0_eslint@7.22.0
       eslint-plugin-header: 3.1.1_eslint@7.22.0
       eslint-plugin-import: 2.22.1_eslint@7.22.0
       eslint-plugin-prettier: 3.3.1_cdac37046eab2e8d6fb794f34ed825c2
+      events: 3.3.0
       immer: 8.0.1
       jest: 26.6.0_ts-node@9.1.1
+      rollup: 2.42.4
       ts-jest: 26.5.3_jest@26.6.0+typescript@4.1.5
       typescript: 4.1.5
     dev: false
@@ -20186,7 +20176,7 @@ packages:
       prettier: '*'
       ts-node: '*'
     resolution:
-      integrity: sha512-j/YlLgpbKaE1AONs8mg+X5jproZ0m5zSpMRPv8uxSOGFkmBTYAqF5fFqVJbhTP2+gMFUqWqM0FV9RVCyKeIKSg==
+      integrity: sha512-MY4NtNRjLTPuxGxYyxB7OUUWmrTfgUUuvpYjzVJ7DTnmdoerowBWSgbuT3wfnaLsrkYTeC/qizCvTty9LiiVjg==
       tarball: file:projects/acs-calling-declarative.tgz
     version: 0.0.0
   file:projects/acs-chat-declarative.tgz_prettier@2.0.5+ts-node@9.1.1:
@@ -20199,6 +20189,7 @@ packages:
       '@types/jest': 26.0.20
       '@typescript-eslint/eslint-plugin': 4.18.0_e9e1aa536ec0b34179456e3b69e4968e
       '@typescript-eslint/parser': 4.18.0_eslint@7.22.0+typescript@4.1.5
+      copyfiles: 2.4.1
       eslint: 7.22.0
       eslint-config-prettier: 6.15.0_eslint@7.22.0
       eslint-plugin-header: 3.1.1_eslint@7.22.0
@@ -20218,7 +20209,7 @@ packages:
       prettier: '*'
       ts-node: '*'
     resolution:
-      integrity: sha512-Dvfet7uEYruGSHOgIksbZNzgzhkatwbwdMO0MS8PMbLeyiL/qS45bqnBPZ0h3r+SxpwfbVd+vJKIKEn9n2HhQQ==
+      integrity: sha512-C7k1vra8HBcK214BF1DjCyfXZ42hP9SVW/vno6B6UHaMFDdXSAEMqcv2FQTmsswZpdWCc295/qCEy2/ECsRaLg==
       tarball: file:projects/acs-chat-declarative.tgz
     version: 0.0.0
   file:projects/acs-chat-selector.tgz_prettier@2.0.5:
@@ -20227,6 +20218,7 @@ packages:
       '@microsoft/api-documenter': 7.12.12
       '@microsoft/api-extractor': 7.13.2
       '@types/react': 16.14.5
+      copyfiles: 2.4.1
       eslint: 7.22.0
       eslint-config-prettier: 6.15.0_eslint@7.22.0
       eslint-plugin-header: 3.1.1_eslint@7.22.0
@@ -20234,6 +20226,7 @@ packages:
       eslint-plugin-prettier: 3.3.1_cdac37046eab2e8d6fb794f34ed825c2
       memoize-one: 5.1.1
       reselect: 4.0.0
+      rollup: 2.42.4
       typescript: 4.1.5
     dev: false
     id: file:projects/acs-chat-selector.tgz
@@ -20241,7 +20234,7 @@ packages:
     peerDependencies:
       prettier: '*'
     resolution:
-      integrity: sha512-vgq6DDxDUEWYFZ87cBH4q1E92dgwgtbVsPUf6YVIrtITro9kA+YrR7CmgI5smLDwJbCau5vxd9UIEASkg8cXCA==
+      integrity: sha512-/iCBUWZs2hQN3mVwclC7/eXBC4j94SQYcJJU32XCbffl9iIJR8DpfRAaK1wqUrfWuuyOHXz7djiUHXzsqtJktg==
       tarball: file:projects/acs-chat-selector.tgz
     version: 0.0.0
   file:projects/build-tools.tgz_typescript@4.1.5:
@@ -20404,7 +20397,7 @@ packages:
       '@babel/core': 7.13.10
       '@babel/preset-env': 7.13.10_@babel+core@7.13.10
       '@fluentui/react': 7.164.1_b0d7ca8a0459a1df1ff516252688d92a
-      '@fluentui/react-icons': 0.3.10_b0d7ca8a0459a1df1ff516252688d92a
+      '@fluentui/react-icons': 1.1.117
       '@fluentui/react-icons-northstar': 0.51.7_b0d7ca8a0459a1df1ff516252688d92a
       '@fluentui/react-northstar': 0.51.7_b0d7ca8a0459a1df1ff516252688d92a
       '@fluentui/react-theme-provider': 0.18.5_b0d7ca8a0459a1df1ff516252688d92a
@@ -20485,7 +20478,7 @@ packages:
     peerDependencies:
       webpack-cli: '*'
     resolution:
-      integrity: sha512-irlqrdu6PIGa6dbiOIYfrBqwhBSeZIVB8gAKPgSCmefAJtSlAgmYTKRxlwNhhjA7Az0ZXF4ICXiM3nya8ZChgw==
+      integrity: sha512-EJXEdrkMk2uMBHuHc+G/5RT1UMfoqXpFmNLFXc04+PrNtCnYhntwDMIcwR9rBHIPGgBCyMnnumemmZ8qw529Eg==
       tarball: file:projects/communication-ui.tgz
     version: 0.0.0
   file:projects/one-to-one-call.tgz_570bf42e92a70fb216c5cd4d5ed668ef:
@@ -20619,7 +20612,7 @@ packages:
       '@babel/core': 7.13.10
       '@babel/preset-env': 7.13.10_@babel+core@7.13.10
       '@fluentui/react': 7.164.1_b0d7ca8a0459a1df1ff516252688d92a
-      '@fluentui/react-icons': 0.3.10_b0d7ca8a0459a1df1ff516252688d92a
+      '@fluentui/react-icons': 1.1.117
       '@fluentui/react-icons-northstar': 0.51.7_b0d7ca8a0459a1df1ff516252688d92a
       '@fluentui/react-northstar': 0.51.7_b0d7ca8a0459a1df1ff516252688d92a
       '@fluentui/react-theme-provider': 0.18.5_b0d7ca8a0459a1df1ff516252688d92a
@@ -20697,7 +20690,7 @@ packages:
     peerDependencies:
       webpack-cli: '*'
     resolution:
-      integrity: sha512-OGk5WmNz5SZQe7OyGHpnENmNpPJXnakYDoDsXioHAFVPDfvjXt/jLBa9EXlF0PjwW6samC4ZJqvRxNuU/IjhJw==
+      integrity: sha512-/EcCJYOzjv8QDVhS2CfVAQzRSwRGYBhzlYpUDOIzaX6wGc+46agzjESeVAwMV7NCWkynSvvFyuLJfo6LAWpF/Q==
       tarball: file:projects/storybook.tgz
     version: 0.0.0
 registry: ''
@@ -20710,7 +20703,7 @@ specifiers:
   '@babel/preset-env': ^7.12.7
   '@babel/preset-react': ^7.12.7
   '@fluentui/react': ^7.117.1
-  '@fluentui/react-icons': ^0.3.9
+  '@fluentui/react-icons': ~1.1.117
   '@fluentui/react-icons-northstar': ^0.51.2
   '@fluentui/react-northstar': ^0.51.2
   '@fluentui/react-theme-provider': ^0.18.0

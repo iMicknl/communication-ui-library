@@ -60,6 +60,7 @@ export const sendIconDiv = mergeStyles({
   width: '1.0625rem',
   height: '1.0625rem',
   '#sendIconWrapper:hover &': {
-    color: palette.themePrimary
+    color: palette.themePrimary,
+    fill: palette.themePrimary
   }
 });

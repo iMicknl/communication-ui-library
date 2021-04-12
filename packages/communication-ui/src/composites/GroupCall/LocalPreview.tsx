@@ -1,7 +1,7 @@
 // © Microsoft Corporation. All rights reserved.
 
-import { CallVideoIcon, MicIcon } from '@fluentui/react-icons-northstar';
 import { Stack, Toggle, Image, ImageFit, IImageStyles } from '@fluentui/react';
+import { Video20Filled, MicOn20Filled } from '@fluentui/react-icons';
 import React from 'react';
 import {
   localPreviewContainerStyle,
@@ -67,7 +67,7 @@ const LocalPreviewComponentBase = (
         tokens={toggleButtonsBarToken}
         className={toggleButtonsBarStyle}
       >
-        <CallVideoIcon size="medium" />
+        <Video20Filled />
         <Toggle
           styles={toggleStyle}
           disabled={isVideoDisabled}
@@ -82,7 +82,7 @@ const LocalPreviewComponentBase = (
           }}
           ariaLabel="Video Icon"
         />
-        <MicIcon size="medium" />
+        <MicOn20Filled />
         <Toggle
           styles={toggleStyle}
           disabled={isAudioDisabled}

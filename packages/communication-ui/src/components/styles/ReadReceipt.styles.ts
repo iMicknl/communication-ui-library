@@ -8,10 +8,10 @@ const palette = getTheme().palette;
 export const readReceiptIconErrorStyle = mergeStyles({
   marginRight: '-0.06rem',
   fontSize: '1.06rem',
-  color: palette.redDark
+  fill: palette.redDark
 });
 
 export const readReceiptIconMessageStyle = mergeStyles({
   fontSize: '1rem',
-  color: palette.blue
+  fill: palette.blue
 });

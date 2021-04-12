@@ -3,10 +3,13 @@
 import React from 'react';
 import { mergeStyles, TooltipHost } from '@fluentui/react';
 import { MessageStatus } from '../types/ChatMessage';
-import { SizeValue } from '@fluentui/react-northstar';
 import { readReceiptIconErrorStyle, readReceiptIconMessageStyle } from './styles/ReadReceipt.styles';
-import { CircleRingIcon, CompletedIcon, ErrorIcon } from '@fluentui/react-icons';
-import { MessageSeenIcon } from '@fluentui/react-icons-northstar';
+import {
+  Circle20Regular,
+  CheckmarkCircle20Regular,
+  ErrorCircle20Regular,
+  EyeShow20Filled
+} from '@fluentui/react-icons';
 import { BaseCustomStylesProps } from '../types';
 
 /**
@@ -23,8 +26,6 @@ export interface ReadReceiptProps {
   sendingTooltipText?: string;
   /** Text to display in the failed read receipt icon tooltip. */
   failedToSendTooltipText?: string;
-  /** Size of the read receipt icon. */
-  size?: SizeValue;
   /**
    * Allows users to pass in an object contains custom CSS styles.
    * @Example
@@ -45,7 +46,6 @@ export const ReadReceipt = (props: ReadReceiptProps): JSX.Element => {
     seenTooltipText = 'Seen',
     sendingTooltipText = 'Sending',
     failedToSendTooltipText = 'Failed to send',
-    size = 'medium',
     styles
   } = props;
 
@@ -53,27 +53,25 @@ export const ReadReceipt = (props: ReadReceiptProps): JSX.Element => {
     case MessageStatus.FAILED:
       return (
         <TooltipHost content={failedToSendTooltipText}>
-          <ErrorIcon className={mergeStyles(readReceiptIconErrorStyle, styles?.root)} />
+          <ErrorCircle20Regular className={mergeStyles(readReceiptIconErrorStyle, styles?.root)} />
         </TooltipHost>
       );
     case MessageStatus.SENDING:
       return (
         <TooltipHost content={sendingTooltipText}>
-          <CircleRingIcon className={mergeStyles(readReceiptIconMessageStyle, styles?.root)} />
+          <Circle20Regular className={mergeStyles(readReceiptIconMessageStyle, styles?.root)} />
         </TooltipHost>
       );
     case MessageStatus.SEEN:
-      // MessageSeenIcon is only one that takes in size because its a react-northstar-icon. There doesn't seem to be a
-      // equivalent one in react-icons and react-icons don't seem to have size property.
       return (
         <TooltipHost content={seenTooltipText}>
-          <MessageSeenIcon size={size} className={mergeStyles(styles?.root)} />
+          <EyeShow20Filled className={mergeStyles(styles?.root)} />
         </TooltipHost>
       );
     case MessageStatus.DELIVERED:
       return (
         <TooltipHost content={deliveredTooltipText}>
-          <CompletedIcon className={mergeStyles(readReceiptIconMessageStyle, styles?.root)} />
+          <CheckmarkCircle20Regular className={mergeStyles(readReceiptIconMessageStyle, styles?.root)} />
         </TooltipHost>
       );
     default:

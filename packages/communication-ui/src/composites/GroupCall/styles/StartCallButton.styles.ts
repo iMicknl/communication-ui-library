@@ -1,10 +1,12 @@
 // © Microsoft Corporation. All rights reserved.
 
-import { mergeStyles } from '@fluentui/react';
+import { getTheme, mergeStyles } from '@fluentui/react';
+
+const palette = getTheme().palette;
 
 export const videoCameraIconStyle = mergeStyles({
   marginRight: '0.375rem',
-  fontSize: '1.375rem'
+  fill: palette.white
 });
 
 export const buttonStyle = mergeStyles({

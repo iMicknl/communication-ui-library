@@ -2,7 +2,7 @@
 import { PrimaryButton } from '@fluentui/react';
 import React from 'react';
 import { buttonStyle, videoCameraIconStyle } from './styles/StartCallButton.styles';
-import { VideoCameraEmphasisIcon } from '@fluentui/react-icons-northstar';
+import { Video20Filled } from '@fluentui/react-icons';
 
 export interface StartCallButtonProps {
   onClickHandler: () => void;
@@ -16,7 +16,7 @@ export const StartCallButton = (props: StartCallButtonProps): JSX.Element => {
 
   return (
     <PrimaryButton disabled={isDisabled} className={buttonStyle} onClick={onClickHandler}>
-      <VideoCameraEmphasisIcon className={videoCameraIconStyle} size="medium" />
+      <Video20Filled className={videoCameraIconStyle} />
       {buttonText}
     </PrimaryButton>
   );

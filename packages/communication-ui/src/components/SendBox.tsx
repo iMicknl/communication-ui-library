@@ -12,7 +12,7 @@ import {
   MessageBarType,
   concatStyleSets
 } from '@fluentui/react';
-import { SendIcon } from '@fluentui/react-northstar';
+import { Send28Regular, Send28Filled } from '@fluentui/react-icons';
 import {
   TextFieldStyleProps,
   sendBoxStyle,
@@ -180,8 +180,10 @@ export const SendBox = (props: SendBoxProps): JSX.Element => {
         >
           {onRenderIcon ? (
             onRenderIcon(props, isMouseOverSendIcon)
+          ) : isMouseOverSendIcon ? (
+            <Send28Filled className={mergeStyles(sendIconDiv, styles?.sendMessageIcon)} />
           ) : (
-            <SendIcon className={mergeStyles(sendIconDiv, styles?.sendMessageIcon)} outline={!isMouseOverSendIcon} />
+            <Send28Regular className={mergeStyles(sendIconDiv, styles?.sendMessageIcon)} />
           )}
         </div>
       </Stack>
