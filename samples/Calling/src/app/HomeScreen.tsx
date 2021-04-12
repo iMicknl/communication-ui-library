@@ -1,7 +1,7 @@
 // © Microsoft Corporation. All rights reserved.
 import React from 'react';
 import { Stack, PrimaryButton, Icon, Image, IImageStyles, Link } from '@fluentui/react';
-import { VideoCameraEmphasisIcon } from '@fluentui/react-icons-northstar';
+import { Video20Filled } from '@fluentui/react-icons';
 import heroSVG from '../assets/hero.svg';
 import {
   imgStyle,
@@ -65,7 +65,7 @@ export const HomeScreen = (props: HomeScreenProps): JSX.Element => {
           </ul>
         </Stack>
         <PrimaryButton className={buttonStyle} onClick={props.startCallHandler}>
-          <VideoCameraEmphasisIcon className={videoCameraIconStyle} size="medium" />
+          <Video20Filled className={videoCameraIconStyle} />
           {startCallButtonText}
         </PrimaryButton>
         <ThemeSelector label="Theme" horizontal={true} />

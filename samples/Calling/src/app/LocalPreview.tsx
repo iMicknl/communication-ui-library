@@ -1,6 +1,6 @@
 // © Microsoft Corporation. All rights reserved.
 
-import { CallVideoIcon, MicIcon } from '@fluentui/react-icons-northstar';
+import { Video20Filled, MicOn20Filled } from '@fluentui/react-icons';
 import { Stack, Toggle, Image, ImageFit, IImageStyles, mergeStyles } from '@fluentui/react';
 import React from 'react';
 import {
@@ -71,7 +71,7 @@ const LocalPreviewComponentBase = (
         tokens={toggleButtonsBarToken}
         className={mergeStyles(toggleButtonsBarStyle, { background: theme.palette.neutralLight })}
       >
-        <CallVideoIcon size="medium" style={{ color: theme.palette.black }} />
+        <Video20Filled className={mergeStyles({ fill: theme.palette.black })} />
         <Toggle
           styles={toggleStyle}
           disabled={isVideoDisabled}
@@ -86,7 +86,7 @@ const LocalPreviewComponentBase = (
           }}
           ariaLabel="Video Icon"
         />
-        <MicIcon size="medium" style={{ color: theme.palette.black }} />
+        <MicOn20Filled className={mergeStyles({ fill: theme.palette.black })} />
         <Toggle
           styles={toggleStyle}
           disabled={isAudioDisabled}

@@ -14,7 +14,7 @@ import {
   videoCameraIconStyle
 } from './styles/EndChat.styles';
 
-import { ChatIcon } from '@fluentui/react-icons-northstar';
+import { Chat20Filled } from '@fluentui/react-icons';
 import { getThreadId } from './utils/getThreadId';
 import { joinThread } from './utils/joinThread';
 
@@ -64,7 +64,7 @@ export const EndScreen = (props: EndCallProps): JSX.Element => {
               await rejoinThread();
             }}
           >
-            <ChatIcon className={videoCameraIconStyle} size="medium" />
+            <Chat20Filled className={videoCameraIconStyle} />
             <div className={buttonTextStyle}>{isRejoiningThread ? rejoining : rejoinChat}</div>
           </PrimaryButton>
           <DefaultButton className={buttonStyle} onClick={props.homeHandler}>

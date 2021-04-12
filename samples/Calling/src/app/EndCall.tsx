@@ -1,7 +1,7 @@
 // © Microsoft Corporation. All rights reserved.
 import React from 'react';
 import { DefaultButton, PrimaryButton, Stack, Link } from '@fluentui/react';
-import { VideoCameraEmphasisIcon } from '@fluentui/react-icons-northstar';
+import { Video20Filled } from '@fluentui/react-icons';
 import {
   endCallContainerStyle,
   endCallTitleStyle,
@@ -29,7 +29,7 @@ export default function EndCall(props: EndCallProps): JSX.Element {
         <div className={endCallTitleStyle}>{leftCall}</div>
         <Stack horizontal tokens={buttonsStackTokens}>
           <PrimaryButton className={buttonStyle} onClick={props.rejoinHandler}>
-            <VideoCameraEmphasisIcon className={videoCameraIconStyle} size="medium" />
+            <Video20Filled className={videoCameraIconStyle} />
             {rejoinCall}
           </PrimaryButton>
           <DefaultButton className={buttonStyle} onClick={props.homeHandler}>
