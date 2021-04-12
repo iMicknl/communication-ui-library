@@ -3,8 +3,8 @@ import { Meta } from '@storybook/react/types-6-0';
 import { ParticipantItem } from '@azure/communication-ui';
 import { boolean, text, select } from '@storybook/addon-knobs';
 import { EXAMPLES_FOLDER_PREFIX } from '../../constants';
-import { Stack, PersonaPresence } from '@fluentui/react';
-import { MicOffIcon, CallControlPresentNewIcon } from '@fluentui/react-northstar';
+import { Stack, PersonaPresence, mergeStyles } from '@fluentui/react';
+import { MicOff20Filled, ShareScreenStart20Filled } from '@fluentui/react-icons';
 import { getDocs } from './ParticipantListDocs';
 
 const onlyUnique = (value: string, index: number, self: string[]): boolean => {
@@ -47,6 +47,7 @@ export const ParticipantListComponent: () => JSX.Element = () => {
 
   const headingStyle = { fontSize: '1.5rem', marginBottom: '1rem' };
   const stackStyle = { width: '12.5rem' };
+  const iconStyles = mergeStyles({ height: '0.875rem' });
 
   return (
     <Stack>
@@ -73,8 +74,8 @@ export const ParticipantListComponent: () => JSX.Element = () => {
               presence={p.presence}
               onRenderIcon={() => (
                 <Stack horizontal={true} tokens={{ childrenGap: '0.5rem' }}>
-                  {p.displayName === screenSharer && <CallControlPresentNewIcon size="small" />}
-                  {p.isMuted && <MicOffIcon size="small" />}
+                  {p.displayName === screenSharer && <ShareScreenStart20Filled className={iconStyles} />}
+                  {p.isMuted && <MicOff20Filled className={iconStyles} />}
                 </Stack>
               )}
               menuItems={menuItems}

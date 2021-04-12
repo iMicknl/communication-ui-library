@@ -61,5 +61,5 @@ export const incomingCallModalLocalPreviewStyle = mergeStyles({
 });
 
 export const incomingCallModalVideoIconStyle = mergeStyles({
-  height: '0.9rem'
+  height: '0.875rem'
 });

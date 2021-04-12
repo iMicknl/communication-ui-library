@@ -5,7 +5,7 @@ import React from 'react';
 
 const exampleIncomingCallToast = `
 import { DefaultButton, Persona, PersonaSize, Stack, Dialog, DialogType, DialogFooter } from '@fluentui/react';
-import { CallEndIcon, CallIcon, CallVideoIcon, CallVideoOffIcon } from '@fluentui/react-northstar';
+import { CallEnd20Filled, Call20Filled, Video20Filled, VideoOff20Filled } from '@fluentui/react-icons';
 import { getTheme, mergeStyles } from '@fluentui/react';
 
 const theme = getTheme();
@@ -55,7 +55,7 @@ const incomingCallRejectButtonStyle = mergeStyles({
 type IncomingCallToastProps = {
   /** Caller's Name */
   callerName?: string;
-  /** Alert Text. For example "incoming vido call..." */
+  /** Alert Text. For example "incoming video call..." */
   alertText?: string;
   /** Caller's Avatar/Profile Image */
   avatar?: string;
@@ -91,10 +91,10 @@ const IncomingCallToast = (props: IncomingCallToastProps): JSX.Element => {
 
       <Stack horizontal tokens={{ childrenGap: 10 }}>
         <DefaultButton onClick={() => onClickReject()} className={incomingCallRejectButtonStyle}>
-          <CallEndIcon size={'medium'} />
+          <CallEnd20Filled />
         </DefaultButton>
         <DefaultButton onClick={() => onClickAccept()} className={incomingCallAcceptButtonStyle}>
-          <CallIcon size={'medium'} />
+          <Call20Filled />
         </DefaultButton>
       </Stack>
     </Stack>
@@ -105,7 +105,7 @@ const IncomingCallToast = (props: IncomingCallToastProps): JSX.Element => {
 const exampleIncomingCallModal = `
 import { StreamMedia, VideoTile } from '@azure/communication-ui';
 import { DefaultButton, Persona, PersonaSize, Stack, Dialog, DialogType, DialogFooter } from '@fluentui/react';
-import { CallEndIcon, CallIcon, CallVideoIcon, CallVideoOffIcon } from '@fluentui/react-northstar';
+import { CallEnd20Filled, Call20Filled, Video20Filled, VideoOff20Filled } from '@fluentui/react-icons';
 import { getTheme, mergeStyles } from '@fluentui/react';
 
 const theme = getTheme();
@@ -216,7 +216,7 @@ const IncomingCallModal = (props: WithTheme<IncomingCallModalProps>): JSX.Elemen
             onClick={() => onClickVideoToggle()}
             style={{ background: palette.neutralLighterAlt, border: 'none' }}
           >
-            {showLocalVideo ? <CallVideoIcon size="small" /> : <CallVideoOffIcon size="small" />}
+            {showLocalVideo ? <Video20Filled /> : <VideoOff20Filled />}
           </DefaultButton>
 
           <DefaultButton

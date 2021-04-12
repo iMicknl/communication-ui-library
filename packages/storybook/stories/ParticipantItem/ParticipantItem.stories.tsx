@@ -6,8 +6,8 @@ import { Meta } from '@storybook/react/types-6-0';
 import { boolean, text } from '@storybook/addon-knobs';
 import { ParticipantItem } from '@azure/communication-ui';
 import { getDocs } from './ParticipantItemDocs';
-import { Stack } from '@fluentui/react';
-import { MicOffIcon, CallControlPresentNewIcon } from '@fluentui/react-northstar';
+import { Stack, mergeStyles } from '@fluentui/react';
+import { MicOff20Filled, ShareScreenStart20Filled } from '@fluentui/react-icons';
 import { COMPONENT_FOLDER_PREFIX } from '../constants';
 
 const onlyUnique = (value: string, index: number, self: string[]): boolean => {
@@ -33,6 +33,7 @@ export const ParticipantItemComponent: () => JSX.Element = () => {
     });
 
   const containerStyle = { width: '12rem' };
+  const iconStyles = mergeStyles({ height: '0.875rem' });
 
   return (
     <div style={containerStyle}>
@@ -42,8 +43,8 @@ export const ParticipantItemComponent: () => JSX.Element = () => {
         menuItems={menuItems}
         onRenderIcon={() => (
           <Stack horizontal={true} tokens={{ childrenGap: '0.5rem' }}>
-            {isScreenSharing && <CallControlPresentNewIcon size="small" />}
-            {isMuted && <MicOffIcon size="small" />}
+            {isScreenSharing && <ShareScreenStart20Filled className={iconStyles} />}
+            {isMuted && <MicOff20Filled className={iconStyles} />}
           </Stack>
         )}
       />

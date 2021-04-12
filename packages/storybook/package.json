@@ -27,7 +27,6 @@
     "@azure/core-http": "^1.2.3",
     "@fluentui/react": "^7.117.1",
     "@fluentui/react-icons": "~1.1.117",
-    "@fluentui/react-icons-northstar": "^0.51.2",
     "@fluentui/react-northstar": "^0.51.2",
     "@fluentui/react-theme-provider": "^0.18.0",
     "classnames": "^2.2.6",

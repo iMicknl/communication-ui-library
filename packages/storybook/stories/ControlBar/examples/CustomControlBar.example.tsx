@@ -7,7 +7,7 @@ import {
   videoButtonProps
 } from '@azure/communication-ui';
 import { DefaultButton, concatStyleSets } from '@fluentui/react';
-import { CallEndIcon } from '@fluentui/react-northstar';
+import { CallEnd20Filled } from '@fluentui/react-icons';
 
 export const CustomControlBarExample: () => JSX.Element = () => {
   const CustomHangupButton: () => JSX.Element = () => {
@@ -26,7 +26,7 @@ export const CustomControlBarExample: () => JSX.Element = () => {
     });
     return (
       <DefaultButton
-        onRenderIcon={() => <CallEndIcon />}
+        onRenderIcon={() => <CallEnd20Filled />}
         onRenderText={() => <span style={{ marginLeft: '0.250rem' }}>End Call</span>}
         styles={styles}
         onClick={() => {
