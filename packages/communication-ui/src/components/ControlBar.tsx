@@ -3,7 +3,7 @@ import { mergeStyles, Stack, IButtonProps } from '@fluentui/react';
 import {
   Call20Filled,
   CallEnd20Filled,
-  Record20Filled,
+  Record20Regular,
   MicOn20Filled,
   MicOff20Filled,
   MoreHorizontal20Filled,
@@ -73,9 +73,9 @@ export const labeledAudioButtonProps: IButtonProps = {
 export const screenShareButtonProps: IButtonProps = {
   onRenderIcon: (props?: IButtonProps): JSX.Element => {
     if (props?.checked) {
-      return <ShareScreenStart20Filled />;
-    } else {
       return <ShareScreenStop20Filled />;
+    } else {
+      return <ShareScreenStart20Filled />;
     }
   },
   styles: controlButtonStyles
@@ -116,7 +116,7 @@ export const labeledOptionsButtonProps: IButtonProps = {
 
 /** Fluent UI Button props for recording control */
 export const recordButtonProps: IButtonProps = {
-  onRenderIcon: (): JSX.Element => <Record20Filled />,
+  onRenderIcon: (): JSX.Element => <Record20Regular />,
   styles: controlButtonStyles
 };
 

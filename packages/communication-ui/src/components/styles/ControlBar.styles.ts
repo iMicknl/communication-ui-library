@@ -133,10 +133,12 @@ export const controlButtonLabelStyles: IStyle = {
 export const hangUpControlButtonStyles: IButtonStyles = concatStyleSets(controlButtonStyles, {
   root: {
     background: palette.redDark,
+    color: palette.white,
     fill: palette.white
   },
   rootHovered: {
     background: palette.red,
+    color: palette.white,
     fill: palette.white
   },
   label: {
