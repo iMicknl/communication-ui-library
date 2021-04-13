@@ -79,9 +79,7 @@ const MediaControlsComponentBase = (props: MediaControlsProps & ErrorHandlingPro
         }}
         className={localVideoBusy || cameraDisabled ? controlButtonDisabledStyle : controlButtonStyle}
       >
-        <div className={fullWidth}>
-          {localVideoEnabled ? <Video20Filled size="medium" /> : <VideoOff20Filled size="medium" />}
-        </div>
+        <div className={fullWidth}>{localVideoEnabled ? <Video20Filled /> : <VideoOff20Filled />}</div>
       </CommandButton>
       <CommandButton
         onClick={() => {
@@ -119,7 +117,7 @@ const MediaControlsComponentBase = (props: MediaControlsProps & ErrorHandlingPro
         styles={leaveButtonStyle}
       >
         <div className={fullWidth}>
-          <CallEnd20Filled size="medium" />
+          <CallEnd20Filled />
           {!compressedMode && <span className={endCallButtonTextStyle}>Leave</span>}
         </div>
       </CommandButton>
